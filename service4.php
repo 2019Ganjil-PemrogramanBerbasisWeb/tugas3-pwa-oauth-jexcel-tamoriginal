@@ -239,7 +239,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="col-md-4">
               <h3 class="text-white h5 mb-3">Subscribe</h3>
               <form action="um.php" class="d-flex">
-                <input type="text" class="form-control mr-3" placeholder="Enter your email">
+                <input type="email" class="form-control mr-3" placeholder="Enter your email" required>
                 <input type="submit" class="btn btn-primary text-white" value="Send Now">
               </form>
             </div>
