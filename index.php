@@ -97,7 +97,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
               <div class="d-flex media-38289 justify-content-around mb-5">
               </div>
-              <p><a href="#" class="btn btn-primary text-white px-4 py-3">Learn More</a></p>
+              <p><a href="um.php" class="btn btn-primary text-white px-4 py-3">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -256,7 +256,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <div class="row">
             <div class="col-md-4">
               <h3 class="text-white h5 mb-3">Subscribe</h3>
-              <form action="" class="d-flex">
+              <form action="um.php" class="d-flex">
                 <input type="text" class="form-control mr-3" placeholder="Enter your email">
                 <input type="submit" class="btn btn-primary text-white" value="Send Now">
               </form>
@@ -264,11 +264,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="col-md-3 ml-auto">
               <h3 class="text-white h5 mb-3">Subscribe</h3>
               <ul class="list-unstyled menu-arrow">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="um.php">About Us</a></li>
+                <li><a href="um.php">Testimonials</a></li>
+                <li><a href="um.php">Terms of Service</a></li>
+                <li><a href="um.php">Privacy</a></li>
+                <li><a href="um.php">Contact Us</a></li>
               </ul>
             </div>
             <div class="col-md-4">
