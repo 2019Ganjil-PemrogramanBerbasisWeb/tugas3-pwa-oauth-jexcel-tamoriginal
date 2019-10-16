@@ -90,7 +90,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 						<div class="row">
 							<div class="col-lg-4 col-md-6 mb-4">
 								<div class="post-entry-1 h-100">
-									<a href="single.html">
+									<a href="um.php">
 										<img src="images/img_1.jpg" alt="Image" class="img-fluid">
 									</a>
 									<div class="post-entry-1-contents">
@@ -110,7 +110,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 							</div>
 							<div class="col-lg-4 col-md-6 mb-4">
 								<div class="post-entry-1 h-100">
-									<a href="single.html">
+									<a href="um.php">
 										<img src="images/img_2.jpg" alt="Image" class="img-fluid">
 									</a>
 									<div class="post-entry-1-contents">
@@ -130,7 +130,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 							</div>
 							<div class="col-lg-4 col-md-6 mb-4">
 								<div class="post-entry-1 h-100">
-									<a href="single.html">
+									<a href="um.php">
 										<img src="images/img_3.jpg" alt="Image" class="img-fluid">
 									</a>
 									<div class="post-entry-1-contents">
