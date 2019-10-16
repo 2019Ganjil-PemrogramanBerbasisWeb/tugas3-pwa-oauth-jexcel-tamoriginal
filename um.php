@@ -31,7 +31,7 @@
 					<div class="row align-items-center position-relative">
 						<div class="col-3 ">
 							<div class="site-logo">
-								<a href="index.html">SmartFX</a>
+								<a href="index.php">SmartFX</a>
 							</div>
 						</div>
 						<div class="col-9  text-right">
