@@ -76,6 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <li><a href="contact.php" class="nav-link">Contact</a></li>
                                 <li class="active"><a href="login.php" class="nav-link"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
                                 <li><a href="logout.php" class="nav-link">Sign Out</a></li>
+                                <li><a href="reset-password.php" class="nav-link">Reset Password</a></li>
                             </ul>
                         </nav>
                     </div>
