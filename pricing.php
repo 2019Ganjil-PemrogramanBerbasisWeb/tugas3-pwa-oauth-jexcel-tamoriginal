@@ -96,7 +96,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 									<div class="post-entry-1-contents">
 										<h2><a href="#">FAMILY</a></h2>
 										<span class="meta d-inline-block mb-3">IDR 100.000 /month <span
-												class="mx-2"></span> <a class="btn btn-primary" href="#"
+												class="mx-2"></span> <a class="btn btn-primary" href="um.php"
 												role="button">SUBS</a></span>
 										<p>
 											<ul>
@@ -116,7 +116,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 									<div class="post-entry-1-contents">
 										<h2><a href="#">ELITE</a></h2>
 										<span class="meta d-inline-block mb-3">IDR 350.000 /month <span
-												class="mx-2"></span> <a class="btn btn-primary" href="#"
+												class="mx-2"></span> <a class="btn btn-primary" href="um.php"
 												role="button">SUBS</a></span>
 										<p>
 											<ul>
@@ -136,7 +136,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 									<div class="post-entry-1-contents">
 										<h2><a href="#">MAXIMA</a></h2>
 										<span class="meta d-inline-block mb-3">IDR 1.050.000 /month <span
-												class="mx-2"></span> <a class="btn btn-primary" href="#"
+												class="mx-2"></span> <a class="btn btn-primary" href="um.php"
 												role="button">SUBS</a></span>
 										<p>
 											<ul>
@@ -160,7 +160,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<div class="row">
 					<div class="col-md-4">
 						<h3 class="text-white h5 mb-3">Subscribe</h3>
-						<form action="" class="d-flex">
+						<form action="um.php" class="d-flex">
 							<input type="text" class="form-control mr-3" placeholder="Enter your email">
 							<input type="submit" class="btn btn-primary text-white" value="Send Now">
 						</form>
@@ -168,11 +168,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<div class="col-md-3 ml-auto">
 						<h3 class="text-white h5 mb-3">Subscribe</h3>
 						<ul class="list-unstyled menu-arrow">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Testimonials</a></li>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="um.php">About Us</a></li>
+							<li><a href="um.php">Testimonials</a></li>
+							<li><a href="um.php">Terms of Service</a></li>
+							<li><a href="um.php">Privacy</a></li>
+							<li><a href="um.php">Contact Us</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
