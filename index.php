@@ -56,7 +56,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
           <div class="col-3 ">
             <div class="site-logo">
-              <a href="index.html">SmartFX</a>
+              <a href="index.php">SmartFX</a>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
               <div class="d-flex media-38289 justify-content-around mb-5">
               </div>
-              <p><a href="service.php" class="btn btn-primary text-white px-4 py-3">Learn More</a></p>
+              <p><a href="um.php" class="btn btn-primary text-white px-4 py-3">Learn More</a></p>
             </div>
           </div>
         </div>
