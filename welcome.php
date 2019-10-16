@@ -70,11 +70,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                         <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                                <li class="active"><a href="index.php" class="nav-link">Home</a></li>
+                                <li><a href="index.php" class="nav-link">Home</a></li>
                                 <li><a href="service.php" class="nav-link">Service</a></li>
                                 <li><a href="pricing.php" class="nav-link">Pricing</a></li>
                                 <li><a href="contact.php" class="nav-link">Contact</a></li>
-                                <li><a href="login.php" class="nav-link"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
+                                <li class="active"><a href="login.php" class="nav-link"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
                                 <li><a href="logout.php" class="nav-link">Sign Out</a></li>
                             </ul>
                         </nav>
