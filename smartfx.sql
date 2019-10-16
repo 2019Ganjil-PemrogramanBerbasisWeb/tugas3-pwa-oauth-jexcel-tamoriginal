@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`no`, `username`, `password`) VALUES
 (6, 'andrew', '$2y$10$/TvnxGeanijE4nAN5p548e.pZHTrbmo2RcIqOafVYruyLpJUJjCNW'),
-(8, 'anggatai', '$2y$10$cGQ.46VqRN5.P4milGYJnO4K.w7BVlySJeFymUEnO.w8LuufxxLnC');
+(8, 'angga', '$2y$10$cGQ.46VqRN5.P4milGYJnO4K.w7BVlySJeFymUEnO.w8LuufxxLnC');
 
 --
 -- Indexes for dumped tables
