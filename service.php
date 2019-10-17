@@ -212,7 +212,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </a>
                 <div class="post-entry-1-contents">
 
-                  <h2><a href="#">Kertajaya, Surabaya</a></h2>
+                  <h2><a>Kertajaya, Surabaya</a></h2>
                   <span class="meta d-inline-block mb-3">January 17, 2019 <span class="mx-2">by</span> <a>Admin</a></span>
                   <p>Small Packet</p>
                 </div>
@@ -225,7 +225,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </a>
                 <div class="post-entry-1-contents">
 
-                  <h2><a href="#">Imam Bonjol, Jakarta</a></h2>
+                  <h2><a>Imam Bonjol, Jakarta</a></h2>
                   <span class="meta d-inline-block mb-3">March 27, 2019 <span class="mx-2">by</span> <a>Admin</a></span>
                   <p>Large Packet</p>
                 </div>
@@ -239,7 +239,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </a>
                 <div class="post-entry-1-contents">
 
-                  <h2><a href="#">Hassanudin, Sulawesi Tengah</a></h2>
+                  <h2><a>Hassanudin, Sulawesi Tengah</a></h2>
                   <span class="meta d-inline-block mb-3">October 8, 2018 <span class="mx-2">by</span> <a>Admin</a></span>
                   <p>Large Packet</p>
                 </div>
