@@ -178,7 +178,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li><a href="aboutus.php">About Us</a></li>
                 <li><a href="testi.php">Testimonials</a></li>
                 <li><a href="terms.php">Terms of Service</a></li>
-                <li><a href="single.php">Privacy</a></li>
                 <li><a href="single.php">Contact Us</a></li>
               </ul>
             </div>
