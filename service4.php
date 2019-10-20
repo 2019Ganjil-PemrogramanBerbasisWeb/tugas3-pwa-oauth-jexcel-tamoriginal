@@ -95,10 +95,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="col-md-7">
             <span class="h4 text-primary mb-4 d-block">The best from us</span>
               <h1 class="mb-2">To your family.</h1>
-
-              <div class="d-flex media-38289 justify-content-around mb-5">
-              </div>
-              <p><a href="um.php" class="btn btn-primary text-white px-4 py-3">Learn More</a></p>
             </div>
           </div>
         </div>
