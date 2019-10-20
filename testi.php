@@ -68,10 +68,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="service.html" class="nav-link">Service</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="service.php" class="nav-link">Service</a></li>
+                <li><a href="pricing.php" class="nav-link">Pricing</a></li>
+                <li><a href="contact.php" class="nav-link">Contact</a></li>
                 <li><a href="login.php" class="nav-link">Login</a></li>
               </ul>
             </nav>
@@ -175,11 +175,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="col-md-3 ml-auto">
               <h3 class="text-white h5 mb-3">More Information</h3>
               <ul class="list-unstyled menu-arrow">
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="testi.html">Testimonials</a></li>
-                <li><a href="single.html">Terms of Service</a></li>
-                <li><a href="single.html">Privacy</a></li>
-                <li><a href="single.html">Contact Us</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="testi.php">Testimonials</a></li>
+                <li><a href="single.php">Terms of Service</a></li>
+                <li><a href="single.php">Privacy</a></li>
+                <li><a href="single.php">Contact Us</a></li>
               </ul>
             </div>
             <div class="col-md-4">
