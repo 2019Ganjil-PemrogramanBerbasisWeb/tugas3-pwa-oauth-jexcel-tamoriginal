@@ -187,9 +187,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               <ul class="list-unstyled menu-arrow">
                 <li><a href="aboutus.php">About Us</a></li>
                 <li><a href="testi.php">Testimonials</a></li>
-                <li><a href="single.html">Terms of Service</a></li>
-                <li><a href="single.html">Privacy</a></li>
-                <li><a href="single.html">Contact Us</a></li>
+                <li><a href="single.php">Terms of Service</a></li>
+                <li><a href="single.php">Privacy</a></li>
+                <li><a href="single.php">Contact Us</a></li>
               </ul>
             </div>
             <div class="col-md-4">
