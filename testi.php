@@ -9,21 +9,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 ?>
 
-
-
-
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>About Us</title>
+  <title>SmartFX</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="fonts/icomoon/style.css">
-
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -31,7 +25,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
-
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -75,13 +68,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
-              <li><a href="index.php" class="nav-link">Home</a></li>
-                <li><a href="service.php" class="nav-link">Service</a></li>
-                <li><a href="pricing.php" class="nav-link">Pricing</a></li>
-                <li><a href="contact.php" class="nav-link">Contact</a></li>
-                <li><a href="login.php" class="nav-link"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></li>
-                <li><a href="logout.php" class="nav-link">Sign Out</a></li>
-                <li><a href="reset-password.php" class="nav-link">Reset Password</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="service.html" class="nav-link">Service</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.php" class="nav-link">Login</a></li>
               </ul>
             </nav>
           </div>
@@ -97,31 +88,26 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <span class="h4 text-primary mb-4 d-block">Hi there !</span>
-              <h1 class="mb-2">Welcome to our family ^_^</h1>
+              <span class="h4 text-primary mb-4 d-block">Let's take a look</span>
+              <h1 class="mb-2">How they see us ?</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
   </div>
   </div>
   </div>
   </form>
 
+
   <div class="site-section bg-black block-14">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-          <h3 class="heading-29201 text-center text-white">Founder</h3>
+          <h3 class="heading-29201 text-center text-white">A little Testimony</h3>
 
-          <p class="mb-5 text-white">of this company</p>
+          <p class="mb-5 text-white">From all around the world</p>
         </div>
       </div>
 
@@ -138,30 +124,34 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="post-entry-1 h-100">
-                  <img src="images/andrew.jpg" alt="Image" class="img-fluid">
+                  <img src="images/person_1.jpg" alt="Image" width="100%" height="50%">
                 <div class="post-entry-1-contents">
-                  <h2><a>Christian Andrew</a></h2>
-                  <span class="meta d-inline-block mb-3">Full-Stack Developer, 18 Years Old</span>
+                  <h2><a>Neil Patel</a></h2>
+                  <span class="meta d-inline-block mb-3">SEO Expert</span>
+                  <p>While using their service, I have a lot of time to spent with my lovely family. Thanks to SmartFX. GOOD JOB !!!!</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="post-entry-1 h-100">
-                  <img src="images/angga.jpg" alt="Image" class="img-fluid">
+                  <img src="images/person_2.jpg" alt="Image" width="100%" height="50%">
                 <div class="post-entry-1-contents">
-                  <h2><a>Anggada Putra</a></h2>
-                  <span class="meta d-inline-block mb-3">CEO, 18 Years Old</span>
+
+                  <h2><a>Sarah Connor</a></h2>
+                  <span class="meta d-inline-block mb-3">Web Developer</span>
+                  <p>Thanks to SmartFX for bringing easiness to my life. I can control everything on my house just using their website. NICEE !!!</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="post-entry-1 h-100">
-                  <img src="images/izul.jpg" alt="Image" class="img-fluid">
+                  <img src="images/person_3.jpg" alt="Image" width="100%" height="50%">
                 <div class="post-entry-1-contents">
 
-                  <h2><a>Ifaizul H</a></h2>
-                  <span class="meta d-inline-block mb-3">Co-CEO, 18 Years Old</span>
+                  <h2><a>Jane Doe</a></h2>
+                  <span class="meta d-inline-block mb-3">Graphic Designer</span>
+                  <p>I just simply click my smart bathtub and it will ready when I get home. Excellence project from SmartFX !!!</p>
                 </div>
               </div>
             </div>
@@ -185,8 +175,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="col-md-3 ml-auto">
               <h3 class="text-white h5 mb-3">More Information</h3>
               <ul class="list-unstyled menu-arrow">
-                <li><a href="aboutus.php">About Us</a></li>
-                <li><a href="testi.php">Testimonials</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="testi.html">Testimonials</a></li>
                 <li><a href="single.html">Terms of Service</a></li>
                 <li><a href="single.html">Privacy</a></li>
                 <li><a href="single.html">Contact Us</a></li>
