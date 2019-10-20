@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
                 <label style="float: left;">New Password</label>
                 <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
-                <span class="help-block"><?phstyle="float:left;"p echo $new_password_err; ?></span>
+                <span class="help-block"><?php echo $new_password_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label style="float: left;">Confirm Password</label>
