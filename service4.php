@@ -246,7 +246,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               <ul class="list-unstyled menu-arrow">
                 <li><a href="aboutus.php">About Us</a></li>
                 <li><a href="testi.php">Testimonials</a></li>
-                <li><a href="um.php">Terms of Service</a></li>
+                <li><a href="terms.php">Terms of Service</a></li>
                 <li><a href="um.php">Privacy</a></li>
                 <li><a href="um.php">Contact Us</a></li>
               </ul>
