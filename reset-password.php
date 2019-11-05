@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $old_password = md5($_POST['old_password']);
     $oldpassworddb = $row['password'];
     
-    if ($old_password==$oldpassworddb){
+    if ($_POST["old_password"]==$oldpassworddb){
     // Validate new password
     if ($_POST["old_password"] == $_POST["new_password"]) {
         $new_password_err = "Password equals to the old one.";
