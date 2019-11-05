@@ -12,13 +12,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 require_once "conn.php";
 
 // Define variables and initialize with empty values
-$new_password = $confirm_password = $old_password = "";
+$new_password = $confirm_password = $old_password = $oldpassworddb = "";
 $new_password_err = $confirm_password_err = "";
-$old_password = md5($_POST['old_password']);
-$oldpassworddb = $row['password'];
+
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $old_password = md5($_POST['old_password']);
+    $oldpassworddb = $row['password'];
+    
     if ($old_password==$oldpassworddb){
     // Validate new password
     if ($_POST["old_password"] == $_POST["new_password"]) {
@@ -100,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
                 <label style="float: left;">Old Password</label>
-                <input type="password" name="old_password" class="form-control" value="<?php echo $old_password; ?>">
+                <input type="password" name="old_password" class="form-control">
                 <span class="help-block"><?php echo $new_password_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
