@@ -87,6 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($link);
 }
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -106,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<link rel="stylesheet" href="css/style.css">
 		
 	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-		<div class="site-wrap" id="home-section">
+<!--		<div class="site-wrap" id="home-section">
 			<div class="site-mobile-menu site-navbar-target">
 				<div class="site-mobile-menu-header">
 					<div class="site-mobile-menu-close mt-3">
@@ -129,9 +132,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					</div>
 				</div>
 			</header>
-								
+			<div class="ftco-blocks-cover-1">
+				<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
+					<div class="container">
+						<div class="row align-items-center justify-content-center text-center">
+							<div class="col-md-7"> -->
 <center>
-    <div class="wrapper">
+    <div class="wrapper" style="background-image: url('images/hero_1.jpg')">
         <h2 style="color: white;">Login</h2>
         <p>Please fill in your credentials to login.</p></br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -152,12 +159,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
     </center>
-			<div class="ftco-blocks-cover-1">
-				<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
-
-
+						<!--</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</body>
 </html>
