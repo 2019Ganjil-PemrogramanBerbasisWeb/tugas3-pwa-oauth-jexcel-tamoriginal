@@ -18,13 +18,12 @@ $new_password_err = $confirm_password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     $newpassword = trim($_POST["new_password"]);
-     $newpassword = password_hash($newpassword, PASSWORD_DEFAULT);
+    
     if (empty(trim($_POST["new_password"]))) {
         $new_password_err = "Please enter the new password.";
     } elseif (strlen(trim($_POST["new_password"])) < 6) {
         $new_password_err = "Password must have atleast 6 characters.";
-    } elseif ($newpassword == $row["password"]) {
+    } elseif (password_verify($new_password, $hashed_password)) {
         $new_password_err = "Please enter another password.";
     } else {
         $new_password = trim($_POST["new_password"]);
