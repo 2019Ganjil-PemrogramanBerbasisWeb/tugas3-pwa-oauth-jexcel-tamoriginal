@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             header("location: reset-password.php");
                         }
                     }
-                } else {
+                else {
                     // Display an error message if username doesn't exist
                     $username_err = "No account found with that username.";
                 }
