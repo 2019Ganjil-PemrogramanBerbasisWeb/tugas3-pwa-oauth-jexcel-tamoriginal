@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($new_password_err) && ($new_password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
+    }
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
@@ -70,8 +71,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Redirect user to welcome page
                             header("location: reset-password.php");
                         } else {
+				// Check input errors before updating the database
+    	if (empty($new_password_err) && empty($confirm_password_err)) {
+        // Prepare an update statement
+        $sql = "UPDATE users SET password = ? WHERE no = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_id);
+
+            // Set parameters
+            $param_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $param_id = $_SESSION["id"];
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                // Password updated successfully. Destroy the session, and redirect to login page
+                session_destroy();
+                header("location: login.php");
+                exit();
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
                             // Display an error message if password is not valid
-                            header("location: login.php");
+                            header("location: reset-password.php");
                         }
                     }
                 } else {
