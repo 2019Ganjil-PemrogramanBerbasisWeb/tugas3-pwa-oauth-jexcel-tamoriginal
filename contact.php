@@ -120,7 +120,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                   <input type="text" class="form-control" placeholder="First name" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="First name" required>
+                  <input type="text" class="form-control" placeholder="Last name" required>
                 </div>
               </div>
 
