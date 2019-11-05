@@ -71,8 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Redirect user to welcome page
                             header("location: reset-password.php");
                         } else {
-				// Check input errors before updating the database
-    	if (empty($new_password_err) && empty($confirm_password_err)) {
+	    // Check input errors before updating the database
+    if (empty($new_password_err) && empty($confirm_password_err)) {
         // Prepare an update statement
         $sql = "UPDATE users SET password = ? WHERE no = ?";
 
@@ -93,17 +93,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
+        }
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    // Close connection
+    mysqli_close($link);
                             // Display an error message if password is not valid
                             header("location: reset-password.php");
                         }
                     }
-                else {
+	} else {
                     // Display an error message if username doesn't exist
                     $username_err = "No account found with that username.";
                 }
-             else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
+	} else {
+	        echo "Oops! Something went wrong. Please try again later.";
+            	}
         }
         // Close statement
         mysqli_stmt_close($stmt);
