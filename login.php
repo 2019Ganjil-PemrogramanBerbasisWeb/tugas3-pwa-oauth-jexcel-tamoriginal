@@ -131,12 +131,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</header>
 			<div class="ftco-blocks-cover-1">
 				<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
-					<div class="container">
-						<div class="row align-items-center justify-content-center text-center">
-							<div class="col-md-7">
+					
 <center>
     <div class="wrapper">
-        <h2>Login</h2>
+        <h2 style="color: white;">Login</h2>
         <p>Please fill in your credentials to login.</p></br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -156,9 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
     </center>
-							</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
