@@ -12,13 +12,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 require_once "conn.php";
 
 // Define variables and initialize with empty values
-$new_password = $confirm_password = "";
+$new_password = $confirm_password = $old_password = "";
 $new_password_err = $confirm_password_err = "";
+$old_password = md5($_POST['old_password']);
+$oldpassworddb = $row['password'];
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    if ($old_password==$oldpassworddb){
     // Validate new password
+    if ($_POST["old_password"] == $_POST["new_password"]) {
+        $new_password_err = "Password equals to the old one.";
+    } else{
     if (empty(trim($_POST["new_password"]))) {
         $new_password_err = "Please enter the new password.";
     } elseif (strlen(trim($_POST["new_password"])) < 6) {
@@ -35,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $confirm_password_err = "Password did not match.";
         }
     }
-
+    }
+    }
     // Check input errors before updating the database
     if (empty($new_password_err) && empty($confirm_password_err)) {
         // Prepare an update statement
@@ -92,6 +98,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>Reset Password</h2>
         <p style="float: left;">Please fill out this form to reset your password.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
+                <label style="float: left;">Old Password</label>
+                <input type="password" name="old_password" class="form-control" value="<?php echo $old_password; ?>">
+                <span class="help-block"><?php echo $new_password_err; ?></span>
+            </div>
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
                 <label style="float: left;">New Password</label>
                 <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
