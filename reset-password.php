@@ -14,7 +14,7 @@ require_once "conn.php";
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
-$new_password != $password = "";
+$new_password = $password = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
