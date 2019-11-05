@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<div class="container">
 						<div class="row align-items-center justify-content-center text-center">
 							<div class="col-md-7">
-								<span class="h4 text-primary mb-4 d-block"><center>
+<center>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p></br>
@@ -155,8 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p style="float: left;">Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
     </div>
-    </center></span>
-								<h1 class="mb-2">Oops...</h1>
+    </center>
 							</div>
 						</div>
 					</div>
