@@ -76,7 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li><a href="service.php" class="nav-link">Service</a></li>
                 <li><a href="pricing.php" class="nav-link">Pricing</a></li>
                 <li><a href="contact.php" class="nav-link">Contact</a></li>
-                <li><a href="login.php" class="nav-link">Login</a></li>
+                <li><a href="logout.php" class="nav-link">Sign Out</a></li>
               </ul>
             </nav>
           </div>
