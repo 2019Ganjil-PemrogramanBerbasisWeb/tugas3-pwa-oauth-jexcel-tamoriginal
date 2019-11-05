@@ -15,6 +15,7 @@ require_once "conn.php";
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
 $new_password != $password = "";
+
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -26,7 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $new_password = trim($_POST["new_password"]);
     }
-
+    //Check last password
+    if (empty($new_password_err) && ($new_password = $password) {
+            $confirm_password_err = "Password equal to last password.";
+        }
     // Validate confirm password
     if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm the password.";
