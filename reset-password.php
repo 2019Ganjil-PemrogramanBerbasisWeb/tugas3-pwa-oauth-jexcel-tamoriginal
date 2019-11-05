@@ -19,6 +19,8 @@ $new_password_err = $confirm_password_err = "";
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
+    $new_password = $_POST["new_password"];
+    
     if (empty(trim($_POST["new_password"]))) {
         $new_password_err = "Please enter the new password.";
     } elseif (strlen(trim($_POST["new_password"])) < 6) {
