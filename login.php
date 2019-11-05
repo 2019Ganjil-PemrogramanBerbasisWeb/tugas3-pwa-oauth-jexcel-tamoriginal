@@ -129,9 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					</div>
 				</div>
 			</header>
-			<div class="ftco-blocks-cover-1">
-				<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
-					
+								
 <center>
     <div class="wrapper">
         <h2 style="color: white;">Login</h2>
@@ -154,6 +152,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
     </center>
+			<div class="ftco-blocks-cover-1">
+				<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
+
 
 				</div>
 			</div>
