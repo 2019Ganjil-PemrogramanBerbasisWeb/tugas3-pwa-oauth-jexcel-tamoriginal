@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<div class="row align-items-center justify-content-center text-center">
 							<div class="col-md-7">
 <center>
-    <div class="wrapper" style="background-image: url('images/hero_1.jpg')">
+    <div class="wrapper">
         <h2 style="color: white;">Login</h2>
         <p>Please fill in your credentials to login.</p></br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
