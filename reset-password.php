@@ -43,7 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $confirm_password_err = "Password did not match.";
         }
     }
-    }
+    } else {
+                echo "Oops! Something went wrong. Please try again later.";
+           }
+    
     }
     // Check input errors before updating the database
     if (empty($new_password_err) && empty($confirm_password_err)) {
