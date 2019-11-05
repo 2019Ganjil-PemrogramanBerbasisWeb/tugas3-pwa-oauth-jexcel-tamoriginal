@@ -19,18 +19,12 @@ $new_password_err = $confirm_password_err = "";
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $old_password = md5($_POST['old_password']);
-    $oldpassworddb = $row['password'];
-    
-  //  if ($_POST["old_password"]==$oldpassworddb){
-    // Validate new password
-    //if ($_POST["old_password"] == $_POST["new_password"]) {
-      //  $new_password_err = "Password equals to the old one.";
-    //} else{
     if (empty(trim($_POST["new_password"]))) {
         $new_password_err = "Please enter the new password.";
     } elseif (strlen(trim($_POST["new_password"])) < 6) {
         $new_password_err = "Password must have atleast 6 characters.";
+    } elseif (trim($_POST["new_password"]) == $row["password"]) {
+        $new_password_err = "Please enter another password.";
     } else {
         $new_password = trim($_POST["new_password"]);
     }
@@ -42,9 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($new_password_err) && ($new_password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
-     //else {
-              //  echo "Oops! Something went wrong. Please try again later.";
-        //   }
     
     }
     // Check input errors before updating the database
