@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $new_password = trim($_POST["new_password"]);
     }
     //Check last password
-    if (empty($new_password_err) && ($new_password = $password) {
+    if (empty($new_password_err) && ($new_password = $password)){
             $confirm_password_err = "Password equal to last password.";
         }
     // Validate confirm password
