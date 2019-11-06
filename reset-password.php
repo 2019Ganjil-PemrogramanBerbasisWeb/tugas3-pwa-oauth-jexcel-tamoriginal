@@ -43,28 +43,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before updating the database
     if (empty($new_password_err) && empty($confirm_password_err)) {
         // Prepare an update statement
-        $sql = "UPDATE users SET password = ? WHERE no = ?";
-
-        if ($stmt = mysqli_prepare($link, $sql)) {
+        $sq1 = "UPDATE users SET password = ? WHERE no = ?";
+		$sq2 = "SELECT no, username, password FROM users WHERE no = ?";
+		
+		
+		if ($stmt = mysqli_prepare($link, $sq2)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_id);
+            mysqli_stmt_bind_param($stmt, "i", $param_id);
 
             // Set parameters
-            $param_password = password_hash($new_password, PASSWORD_DEFAULT);
             $param_id = $_SESSION["id"];
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
-                // Password updated successfully. Destroy the session, and redirect to login page
-                session_destroy();
-                header("location: login.php");
-                exit();
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
+                // Store result
+                mysqli_stmt_store_result($stmt);
+
+                // Check if username exists, if yes then verify password
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    if (mysqli_stmt_fetch($stmt)) {
+                        if (password_verify($new_password, $hashed_password)) {
+                            // Redirect user to welcome page
+							echo "Passwordnya sama bambang!";
+							// Close statement
+							mysqli_stmt_close($stmt);
+                        } elseif ($stmt = mysqli_prepare($link, $sq1)) {
+							// Bind variables to the prepared statement as parameters
+							mysqli_stmt_bind_param($stmt, "si", $param_password, $param_id);
+
+							// Set parameters
+							$param_password = password_hash($new_password, PASSWORD_DEFAULT);
+							$param_id = $_SESSION["id"];
+
+							// Attempt to execute the prepared statement
+							if (mysqli_stmt_execute($stmt)) {
+								// Password updated successfully. Destroy the session, and redirect to login page
+								session_destroy();
+								header("location: login.php");
+								exit();
+							} else {
+								echo "Oops! Something went wrong. Please try again later.";
+							}
+						}
+                    }
+                }
             }
         }
-        // Close statement
-        mysqli_stmt_close($stmt);
     }
     // Close connection
     mysqli_close($link);
