@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 16, 2019 at 09:37 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 20, 2019 at 01:08 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `smartfx`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dbgambar`
+--
+
+CREATE TABLE `dbgambar` (
+  `no` int(11) NOT NULL,
+  `filepath` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -48,6 +59,12 @@ INSERT INTO `users` (`no`, `username`, `password`) VALUES
 --
 
 --
+-- Indexes for table `dbgambar`
+--
+ALTER TABLE `dbgambar`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -57,6 +74,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `dbgambar`
+--
+ALTER TABLE `dbgambar`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
